@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">manager</string>
+    <string name="text_no_network_">网络开小差了\n点击重试</string>
+    <string name="text_empty">暂无新数据</string>
+    <string name="text_error">请求出问题了</string>
+    <string name="text_loading">加载中...</string>
+</resources>

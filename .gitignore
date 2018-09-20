@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+build/
+MultiStatusLayoutManager.iml
+local.properties
+manager/manager.iml
+app/app.iml
