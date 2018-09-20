@@ -32,4 +32,9 @@
         android:id="@+id/fragment_test_id"
         android:title="Fragment"
         app:showAsAction="never|withText" />
+
+    <item
+        android:id="@+id/list_test_id"
+        android:title="列表"
+        app:showAsAction="never|withText" />
 </menu>

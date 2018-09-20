@@ -7,11 +7,12 @@ import android.os.Handler
 import android.support.v4.app.Fragment
 import android.view.*
 import com.helper.manager.MultiStatusLayoutManager
+import com.helper.manager.SwitchStatusLayoutManager
 import kotlinx.android.synthetic.main.fragment_test.*
 
 class TestFragment : Fragment() {
 
-    private var m: MultiStatusLayoutManager? = null
+    private var m: SwitchStatusLayoutManager? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val inflate = inflater.inflate(R.layout.fragment_test, container, false)
         return inflate
@@ -19,7 +20,19 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        m = MultiStatusLayoutManager.Builder(rootView).create();
+        //测试单例
+//        MultiStatusLayoutManager.Builder().setLoadingView(R.layout.layout_loading).commit()
+//        m = MultiStatusLayoutManager.getInstance().regist(this)
+//        m!!.showLoadingView()
+//        Handler().postDelayed({
+//            m!!.showContentView()
+//        }, 2000)
+
+
+//        ---------------------------
+
+        //测试普通对象
+        m = MultiStatusLayoutManager.Builder().create(this)
         m!!.showLoadingView()
         Handler().postDelayed({
             m!!.showContentView()
