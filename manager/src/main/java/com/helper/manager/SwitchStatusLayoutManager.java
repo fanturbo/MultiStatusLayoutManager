@@ -237,7 +237,7 @@ public class SwitchStatusLayoutManager {
                     view.setOnClickListener(clickListener);
                 }
             }
-            mParentLayout.addView(view);
+            mParentLayout.addView(view, mViewIndex, mLayoutParams);
         } else {
             throw new IllegalArgumentException(String.format("the status (%d) layout is  not exist", statusType));
         }
